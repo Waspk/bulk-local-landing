@@ -1,0 +1,80 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store Locator</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/languages.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-tshirt"></i>
+                <span data-translate="title">Fashion Store Locator</span>
+            </div>
+            <div class="nav-actions">
+                <button class="btn" id="findNearest">
+                    <i class="fas fa-location-arrow"></i>
+                    <span data-translate="findNearest">Find Nearest Store</span>
+                </button>
+                <div class="language-selector">
+                    <!-- Language selector will be added later -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 data-translate="heroTitle">Find Your Style Nearby</h1>
+        <p data-translate="heroSubtitle">Discover amazing deals at our locations nationwide</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Filters Section -->
+        <div class="filters">
+            <!-- Filter content will be added later -->
+        </div>
+
+        <!-- Map and Store List Section -->
+        <div class="map-section">
+            <div id="map"></div>
+            <div class="store-list" id="storeList"></div>
+        </div>
+
+        <!-- Store Grid Section -->
+        <div class="stores-grid" id="storesContainer"></div>
+    </main>
+
+    <!-- Modal Template -->
+    <div class="modal" id="storeModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Internal Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
